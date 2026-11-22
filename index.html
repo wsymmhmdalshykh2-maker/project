@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>المهندس وسيم محمد حفظ الله الشيخ | مهندس تقنية معلومات ومطور مواقع</title>
+    <meta name="description" content="الموقع الشخصي للمهندس وسيم محمد حفظ الله الشيخ - متخصص ومدرس تقنية معلومات، مطور مواقع، خبير صيانة الهواتف، والتسويق الرقمي والتصميم.">
+    <meta name="keywords" content="وسيم الشيخ, وسيم محمد حفظ الله الشيخ, مهندس تقنية معلومات, مطور مواقع, مبرمج, صيانة هواتف, تصميم سيرة ذاتية, إب, اليمن">
+    <meta name="author" content="المهندس وسيم محمد حفظ الله الشيخ">
+    
+    <!-- Open Graph / Meta Social -->
+    <meta property="og:title" content="المهندس وسيم محمد حفظ الله الشيخ | بورتفوليو احترافي">
+    <meta property="og:description" content="خبير تقنية معلومات، مطور مواقع وأنظمة رقمية، خبير برمجة وصيانة وتسويق رقمي.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts: Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+
+    <!-- شريط تقدم القراءة في أعلى الصفحة -->
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+
+    <!-- نافذة الإشعار السريع (Toast Alert) -->
+    <div id="toastNotification" class="toast-notification">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">تم نسخ النص بنجاح!</span>
+    </div>
+
+    <!-- القائمة العلوية الثابتة (Sticky Header) -->
+    <header class="main-header" id="mainHeader">
+        <div class="container header-container">
+            <a href="#hero" class="brand-logo" id="brandLogo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">م. وسيم الشيخ</span>
+                    <span class="logo-subtitle">IT & Web Developer</span>
+                </div>
+            </a>
+
+            <!-- روابط التصفح للشاشات الكبيرة -->
+            <nav class="desktop-nav" id="desktopNav">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
+                    <li><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> نبذة عني</a></li>
+                    <li><a href="#services" class="nav-link"><i class="fa-solid fa-briefcase"></i> الخبرات والخدمات</a></li>
+                    <li><a href="#skills" class="nav-link"><i class="fa-solid fa-award"></i> المهارات والشهادات</a></li>
+                    <li><a href="#projects" class="nav-link"><i class="fa-solid fa-diagram-project"></i> المشاريع</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> تواصل معي</a></li>
+                </ul>
+            </nav>
+
+            <!-- أدوات الرأس: زر الوضع الليلي وقائمة الهاتف -->
+            <div class="header-actions">
+                <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="تبديل الوضع الداكن والفاتح" title="تبديل الوضع">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+
+                <a href="#contact" class="btn btn-outline header-cta-btn">
+                    <span>تواصل مباشر</span>
+                </a>
+
+                <!-- زر قائمة الموبايل (Hamburger Button) -->
+                <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="فتح القائمة" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- قائمة الموبايل المنبثقة -->
+        <div id="mobileMenuDropdown" class="mobile-menu-dropdown">
+            <ul class="mobile-nav-links">
+                <li><a href="#hero" class="mobile-nav-link"><i class="fa-solid fa-house"></i> الواجهة الرئيسية</a></li>
+                <li><a href="#about" class="mobile-nav-link"><i class="fa-solid fa-user"></i> نبذة عني</a></li>
+                <li><a href="#services" class="mobile-nav-link"><i class="fa-solid fa-briefcase"></i> الخبرات والخدمات</a></li>
+                <li><a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-award"></i> المهارات والشهادات</a></li>
+                <li><a href="#projects" class="mobile-nav-link"><i class="fa-solid fa-diagram-project"></i> المشاريع البارزة</a></li>
+                <li><a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-paper-plane"></i> تواصل معي</a></li>
+            </ul>
+            <div class="mobile-menu-footer">
+                <a href="https://wa.me/967770000000" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+                    <i class="fa-brands fa-whatsapp"></i> محادثة واتساب فورية
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. قسم الواجهة الرئيسي (Hero Section) -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-shapes">
+                <div class="glow-orb orb-1"></div>
+                <div class="glow-orb orb-2"></div>
+                <div class="grid-overlay"></div>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <span>متاح للمشاريع الجديدة والاستشارات التقنية</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        أهلاً بك، أنا <br>
+                        <span class="highlight-name">المهندس وسيم محمد حفظ الله الشيخ</span>
+                    </h1>
+
+                    <div class="hero-typing-container">
+                        <span class="typing-prefix">أنا </span>
+                        <span id="typingText" class="typing-text">مهندس تقنية معلومات</span>
+                        <span class="typing-cursor">|</span>
+                    </div>
+
+                    <p class="hero-description">
+                        أخصائي تقنية معلومات وتطوير أنظمة متكاملة وخدمات تسويقية وتصميمية استراتيجية. أجمع بين هندسة البرمجيات، الدعم الفني المتقدم، والإبداع الرقمي لتقديم حلول تقنية ذكية تخدم الأعمال وترفع كفاءتها.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary" id="heroContactBtn">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>تواصل معي</span>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary" id="heroProjectsBtn">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>استعراض المشاريع</span>
+                        </a>
+                        <a href="#about" class="btn btn-glass" id="heroAboutBtn">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <span>تعرف عليّ أكثر</span>
+                        </a>
+                    </div>
+
+                    <!-- إحصائيات سريعة في الهيرو -->
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="8">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">سنوات خبرة متنوعة</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="45">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">مشروع ونظام منجز</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="150">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">عميل وطالب مستفيد</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
+                            <span class="stat-label">دقة واحترافية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- إطار الصورة الشخصية الفاخر للمهندس وسيم -->
+                <div class="hero-image-wrapper">
+                    <div class="avatar-card-container">
+                        <div class="avatar-glow-ring"></div>
+                        <div class="avatar-frame" id="avatarFrame">
+                            <div class="avatar-inner">
+                                <!-- الصورة الشخصية للمهندس وسيم محمد حفظ الله الشيخ -->
+                                <img src="waseem.jpg" 
+                                     alt="المهندس وسيم محمد حفظ الله الشيخ" 
+                                     class="avatar-photo" 
+                                     id="avatarPhoto"
+                                     loading="eager"
+                                     onerror="handleAvatarFallback(this)">
+                                
+                                <!-- رسم بديل أنيق يظهر فقط في حال تعذر تحميل الصورة -->
+                                <div class="avatar-illustration" id="avatarFallback" style="display: none;">
+                                    <div class="avatar-circle-bg">
+                                        <i class="fa-solid fa-user-graduate default-avatar-icon"></i>
+                                    </div>
+                                    <div class="engineer-badge-overlay">
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                        <span>مهندس معتمد</span>
+                                    </div>
+                                </div>
+
+                                <!-- زر تفاعلي لتغيير أو استعراض الصورة -->
+                                <div class="avatar-hover-overlay" onclick="document.getElementById('avatarUploadInput').click()" title="تحديث أو اختيار صورة من جهازك">
+                                    <i class="fa-solid fa-camera"></i>
+                                    <span>تحديث الصورة</span>
+                                </div>
+                                <input type="file" id="avatarUploadInput" accept="image/*" style="display: none;" onchange="handleAvatarUpload(event)">
+                            </div>
+                        </div>
+
+                        <!-- أوسمة تخصصية محيطة بالصورة للشاشات الكبيرة والمتوسطة -->
+                        <div class="floating-badge badge-top-right">
+                            <div class="badge-icon icon-code">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <div class="badge-text">
+                                <strong>تطوير ويب وأنظمة</strong>
+                                <span>Web Development</span>
+                            </div>
+                        </div>
+
+                        <div class="floating-badge badge-bottom-left">
+                            <div class="badge-icon icon-phone">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <div class="badge-text">
+                                <strong>صيانة الهواتف المتقدمة</strong>
+                                <span>Hardware & Software</span>
+                            </div>
+                        </div>
+
+                        <div class="floating-badge badge-bottom-right">
+                            <div class="badge-icon icon-marketing">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </div>
+                            <div class="badge-text">
+                                <strong>تسويق وتصميم احترافي</strong>
+                                <span>Branding & Growth</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- أوسمة مدمجة تظهر على شاشات الهواتف للحفاظ على التناسق وعدم تجاوز العرض -->
+                    <div class="avatar-mobile-badges">
+                        <span class="mobile-badge-item"><i class="fa-solid fa-laptop-code"></i> تطوير ويب وأنظمة</span>
+                        <span class="mobile-badge-item"><i class="fa-solid fa-mobile-screen"></i> صيانة هواتف</span>
+                        <span class="mobile-badge-item"><i class="fa-solid fa-bullhorn"></i> تسويق وتصميم</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- مؤشر النزول للأسفل -->
+            <a href="#about" class="scroll-down-indicator" aria-label="الانتقال للأسفل">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- 2. قسم نبذة عني (About Me Section) -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-user"></i> مسيرتي ورؤيتي</span>
+                    <h2 class="section-title">نبذة شخصية ومهنية</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card-main">
+                        <div class="about-quote-icon">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+                        <h3 class="about-heading">
+                            متخصص ومُدرس في مجال تقنية المعلومات، شغوف بالابتكار وحل التحديات التقنية المعقدة.
+                        </h3>
+                        <p class="about-text-lead">
+                            "متخصص ومُدرس في مجال تقنية المعلومات، أمتلك خبرة عملية واسعة وشهادات معتمدة في مجالات البرمجة، صيانة الهواتف، التصميم الاحترافي، والترويج التسويقي. أهدف دائماً لتقديم حلول تقنية وفنية ترفع من قيمة الأعمال والمنتجات."
+                        </p>
+                        <p class="about-text-body">
+                            أنطلق من خلفية هندسية راسخة تجمع بين الجوانب النظرية والتطبيق الميداني الفعلي. قمت بتدريب العديد من الكوادر والطلاب على أحدث مفاهيم تكنولوجيا المعلومات، إلى جانب تنفيذ مشاريع وأنظمة إلكترونية حيوية تسهم في تعزيز البنية الرقمية ومواكبة التطورات المتسارعة.
+                        </p>
+
+                        <!-- قائمة النقاط الرئيسية -->
+                        <div class="about-features-list">
+                            <div class="about-feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
+                                <div>
+                                    <strong>تعليم ونقل المعرفة:</strong>
+                                    <span>مدرس تقنية معلومات بخبرة في تبسيط المفاهيم البرمجية والتقنية.</span>
+                                </div>
+                            </div>
+                            <div class="about-feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
+                                <div>
+                                    <strong>رؤية شمولية للأعمال:</strong>
+                                    <span>ربط الحلول البرمجية بالتسويق الفعال والتصميم الجذاب لتحقيق أعلى عائد.</span>
+                                </div>
+                            </div>
+                            <div class="about-feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
+                                <div>
+                                    <strong>إتقان صيانة الأجهزة الذكية:</strong>
+                                    <span>تشخيص برمجيات وعتاد الهواتف وحل أعطالها بكفاءة ومعدات دقيقة.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-actions">
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fa-solid fa-handshake"></i>
+                                <span>ابدأ التعاون معي</span>
+                            </a>
+                            <a href="javascript:void(0)" onclick="printOrSavePortfolio()" class="btn btn-outline" id="downloadCvBtn">
+                                <i class="fa-solid fa-download"></i>
+                                <span>تحميل السيرة الذاتية (CV)</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- بطاقات المعلومات السريعة -->
+                    <div class="about-info-cards">
+                        <div class="info-box">
+                            <div class="info-box-icon"><i class="fa-solid fa-user-tie"></i></div>
+                            <div class="info-box-content">
+                                <h4>الاسم الكامل</h4>
+                                <p>المهندس وسيم محمد حفظ الله الشيخ</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-box-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="info-box-content">
+                                <h4>المؤهل والتخصص</h4>
+                                <p>مهندس تقنية معلومات ومدرس تقني</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-box-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-box-content">
+                                <h4>المقر والإقامة</h4>
+                                <p>اليمن - محافظة إب الخضراء</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-box-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <div class="info-box-content">
+                                <h4>طبيعة العمل</h4>
+                                <p>مشاريع حرة، استشارات تقنية، وتدريس</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-box-icon"><i class="fa-solid fa-language"></i></div>
+                            <div class="info-box-content">
+                                <h4>اللغات</h4>
+                                <p>العربية (اللغة الأم)، الإنجليزية (تقنية)</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box highlight-box">
+                            <div class="info-box-icon"><i class="fa-solid fa-bullseye"></i></div>
+                            <div class="info-box-content">
+                                <h4>الرسالة المهنية</h4>
+                                <p>تمكين الأفراد والمؤسسات من استثمار التقنية بأعلى مستويات الجودة والموثوقية.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. قسم الخبرات والخدمات (Services & Experience Section) -->
+        <section id="services" class="section services-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-gears"></i> ما أقدمه لعملائي</span>
+                    <h2 class="section-title">الخبرات والخدمات الاحترافية</h2>
+                    <p class="section-desc">باقة متكاملة من الخدمات التخصصية التي تجمع بين الإتقان البرمجي واللمسة الفنية والتخطيط الاستراتيجي</p>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="services-grid">
+                    <!-- خدمة 1: إنشاء السير الذاتية الاحترافية -->
+                    <div class="service-card" data-tilt>
+                        <div class="service-icon-wrap">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+                        <h3 class="service-title">إنشاء السير الذاتية الاحترافية</h3>
+                        <p class="service-text">
+                            تصميم وصياغة سير ذاتية متميزة ومتوافقة مع أنظمة الفرز الآلي العالمية (ATS)، مع إبراز نقاط القوة والخبرات والمهارات لضمان تميزك واقتناص أفضل الفرص الوظيفية.
+                        </p>
+                        <ul class="service-points">
+                            <li><i class="fa-solid fa-check"></i> نماذج حديثة وعصرية (عربي وإنجليزي)</li>
+                            <li><i class="fa-solid fa-check"></i> صياغة لغوية وهندسية للمهام والإنجازات</li>
+                            <li><i class="fa-solid fa-check"></i> تصدير بصيغ متعددة جاهزة للطباعة والتقديم</li>
+                        </ul>
+                    </div>
+
+                    <!-- خدمة 2: التخطيط الاستراتيجي التقني -->
+                    <div class="service-card" data-tilt>
+                        <div class="service-icon-wrap">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <h3 class="service-title">التخطيط الاستراتيجي للمشاريع</h3>
+                        <p class="service-text">
+                            دراسة وتحليل متطلبات الأنظمة والشركات وبناء خطط تقنية مدروسة تشمل اختيار البنية البرمجية المناسبة، الجدوى الفنية، وخطوات التحول الرقمي الفعال للمؤسسات.
+                        </p>
+                        <ul class="service-points">
+                            <li><i class="fa-solid fa-check"></i> دراسات جدوى تقنية وتحديد الاحتياجات</li>
+                            <li><i class="fa-solid fa-check"></i> هندسة مسارات تدفق البيانات وسير العمل</li>
+                            <li><i class="fa-solid fa-check"></i> استشارات إدارة المخاطر الرقمية والأمان</li>
+                        </ul>
+                    </div>
+
+                    <!-- خدمة 3: التسويق الرقمي ورفع المبيعات -->
+                    <div class="service-card" data-tilt>
+                        <div class="service-icon-wrap">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="service-title">التسويق الرقمي ورفع المبيعات</h3>
+                        <p class="service-text">
+                            إدارة الحملات الإعلانية الممولة وبناء استراتيجيات ترويجية موجهة تستهدف الجمهور المناسب لزيادة التفاعل وتحقيق أعلى معدل تحويل وعائد على الاستثمار.
+                        </p>
+                        <ul class="service-points">
+                            <li><i class="fa-solid fa-check"></i> إدارة إعلانات منصات التواصل الاجتماعي</li>
+                            <li><i class="fa-solid fa-check"></i> استراتيجيات تسويق بالمحتوى والظهور المحلي</li>
+                            <li><i class="fa-solid fa-check"></i> تحسين قنوات المبيعات وخدمة العملاء</li>
+                        </ul>
+                    </div>
+
+                    <!-- خدمة 4: البرمجة وتطوير المواقع -->
+                    <div class="service-card highlight-service" data-tilt>
+                        <div class="service-badge">الأكثر طلباً</div>
+                        <div class="service-icon-wrap">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="service-title">البرمجة وتطوير مواقع الويب</h3>
+                        <p class="service-text">
+                            تطوير وبناء مواقع ومنصات إلكترونية سريعة، متجاوبة 100%، وآمنة باستخدام أحدث تقنيات الويب، مع لوحات تحكم مرنة وتجربة مستخدم لا مثيل لها.
+                        </p>
+                        <ul class="service-points">
+                            <li><i class="fa-solid fa-check"></i> مواقع تعريفية، منصات ومتاجر إلكترونية</li>
+                            <li><i class="fa-solid fa-check"></i> كود نظيف، سريع، ومتوافق مع محركات البحث (SEO)</li>
+                            <li><i class="fa-solid fa-check"></i> ربط قواعد البيانات وواجهات البرمجة APIs</li>
+                        </ul>
+                    </div>
+
+                    <!-- خدمة 5: صيانة الهواتف المتقدمة -->
+                    <div class="service-card" data-tilt>
+                        <div class="service-icon-wrap">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3 class="service-title">صيانة الهواتف الذكية المتقدمة</h3>
+                        <p class="service-text">
+                            تشخيص وإصلاح كافة الأعطال البرمجية (Software) والعتادية (Hardware) لأحدث أجهزة الهواتف الذكية مع شهادات تخصصية وخبرة فنية دقيقة في فك الشيفرات والترقيات.
+                        </p>
+                        <ul class="service-points">
+                            <li><i class="fa-solid fa-check"></i> صيانة اللوحات الإلكترونية واستبدال المكونات</li>
+                            <li><i class="fa-solid fa-check"></i> حل مشاكل الأنظمة (Android & iOS) والرومات</li>
+                            <li><i class="fa-solid fa-check"></i> استرجاع البيانات المفقودة وإصلاح عيوب الإقلاع</li>
+                        </ul>
+                    </div>
+
+                    <!-- خدمة 6: التصاميم الاحترافية والهوية البصرية -->
+                    <div class="service-card" data-tilt>
+                        <div class="service-icon-wrap">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="service-title">التصاميم الاحترافية والهوية</h3>
+                        <p class="service-text">
+                            ابتكار تصاميم إبداعية للشعارات، الهويات البصرية للشركات، بنرات السوشيال ميديا، والمطبوعات الدعائية بأسلوب فني يعكس هوية مشروعك بجاذبية.
+                        </p>
+                        <ul class="service-points">
+                            <li><i class="fa-solid fa-check"></i> تصميم الشعارات ودليل الهوية المتكامل</li>
+                            <li><i class="fa-solid fa-check"></i> بوستات سوشيال ميديا ومواد إعلانية بصرية</li>
+                            <li><i class="fa-solid fa-check"></i> تصاميم UI/UX لواجهات المواقع والتطبيقات</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. قسم المهارات والشهادات (Skills & Certifications Section) -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-award"></i> كفاءاتي وخبراتي</span>
+                    <h2 class="section-title">المهارات التقنية والشهادات المعتمدة</h2>
+                    <p class="section-desc">مزيج من المهارات المكتسبة عبر سنوات من العمل الميداني والشهادات التخصصية المعتمدة</p>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- تبويبات المهارات والشهادات -->
+                <div class="skills-certifications-wrapper">
+                    <!-- عمود المهارات التقنية -->
+                    <div class="skills-column">
+                        <h3 class="column-title"><i class="fa-solid fa-sliders"></i> المهارات والكفاءات البرمجية والتقنية</h3>
+
+                        <div class="skill-group">
+                            <div class="skill-category-title">
+                                <i class="fa-solid fa-code"></i> تطوير الويب والبرمجيات
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 / CSS3 / Vanilla JavaScript</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" data-width="95%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">التصميم المتجاوب (Responsive Design & UI/UX)</span>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" data-width="92%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">تطوير المنصات وإدارة الأنظمة والـ APIs</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" data-width="88%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <div class="skill-category-title">
+                                <i class="fa-solid fa-screwdriver-wrench"></i> صيانة الهواتف والأجهزة الذكية
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">صيانة العتاد والدوائر الإلكترونية (Hardware)</span>
+                                    <span class="skill-percent">94%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" data-width="94%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">صيانة البرمجيات والرومات وفك الحماية (Software)</span>
+                                    <span class="skill-percent">96%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" data-width="96%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <div class="skill-category-title">
+                                <i class="fa-solid fa-bullhorn"></i> التصميم والتسويق الرقمي
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">التسويق الرقمي وإدارة الحملات الإعلانية</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" data-width="90%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">التصميم الجرافيكي وتصميم السير الذاتية (CVs)</span>
+                                    <span class="skill-percent">93%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" data-width="93%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- عمود الشهادات المعتمدة -->
+                    <div class="certifications-column">
+                        <h3 class="column-title"><i class="fa-solid fa-certificate"></i> الشهادات المعتمدة والتأهيل المهني</h3>
+
+                        <div class="certs-list">
+                            <!-- شهادة 1: البرمجة وتطوير الويب -->
+                            <div class="cert-card">
+                                <div class="cert-icon-box cert-programming">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                </div>
+                                <div class="cert-details">
+                                    <div class="cert-meta">
+                                        <span class="cert-tag">شهادة معتمدة</span>
+                                        <span class="cert-year">سارية ومعتمدة</span>
+                                    </div>
+                                    <h4 class="cert-title">شهادة معتمدة في البرمجة وتطوير المواقع والأنظمة</h4>
+                                    <p class="cert-issuer">تأهيل متقدم في هندسة البرمجيات، تطوير واجهات الويب، وبناء المنصات الرقمية المتكاملة.</p>
+                                    <div class="cert-badge-check">
+                                        <i class="fa-solid fa-circle-check"></i> موثوقية واجتياز الامتحانات العملية
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- شهادة 2: صيانة الهواتف المتقدمة -->
+                            <div class="cert-card">
+                                <div class="cert-icon-box cert-mobile">
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                </div>
+                                <div class="cert-details">
+                                    <div class="cert-meta">
+                                        <span class="cert-tag">شهادة معتمدة</span>
+                                        <span class="cert-year">احتراف متقدم</span>
+                                    </div>
+                                    <h4 class="cert-title">شهادة معتمدة في صيانة الهواتف الذكية (سوفت وير وهارد وير)</h4>
+                                    <p class="cert-issuer">إتقان تشخيص المخططات الإلكترونية، تبديل الآيسيات، معالجة مشاكل الأنظمة واسترجاع البيانات.</p>
+                                    <div class="cert-badge-check">
+                                        <i class="fa-solid fa-circle-check"></i> ممارسة مخبرية وفنية معتمدة
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- شهادة 3: التصميم الاحترافي -->
+                            <div class="cert-card">
+                                <div class="cert-icon-box cert-design">
+                                    <i class="fa-solid fa-pen-nib"></i>
+                                </div>
+                                <div class="cert-details">
+                                    <div class="cert-meta">
+                                        <span class="cert-tag">شهادة معتمدة</span>
+                                        <span class="cert-year">إبداع واحتراف</span>
+                                    </div>
+                                    <h4 class="cert-title">شهادة معتمدة في التصميم الاحترافي وصناعة الهويات</h4>
+                                    <p class="cert-issuer">تصميم الهويات المؤسسية، صناعة السير الذاتية التفاعلية وفق المعايير العالمية، وتصاميم الإعلانات.</p>
+                                    <div class="cert-badge-check">
+                                        <i class="fa-solid fa-circle-check"></i> معايير بصرية وفنية دقيقة
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- شهادة 4: التسويق الرقمي والترويج -->
+                            <div class="cert-card">
+                                <div class="cert-icon-box cert-marketing">
+                                    <i class="fa-solid fa-bullhorn"></i>
+                                </div>
+                                <div class="cert-details">
+                                    <div class="cert-meta">
+                                        <span class="cert-tag">شهادة معتمدة</span>
+                                        <span class="cert-year">تخصص استراتيجي</span>
+                                    </div>
+                                    <h4 class="cert-title">شهادة معتمدة في الترويج والتسويق الرقمي ورفع المبيعات</h4>
+                                    <p class="cert-issuer">إعداد الخطط الإعلانية الممولة، إدارة الحملات الترويجية، استهداف العملاء وقياس الأداء التحليلي.</p>
+                                    <div class="cert-badge-check">
+                                        <i class="fa-solid fa-circle-check"></i> استراتيجيات نمو للمشاريع الناشئة
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. قسم المشاريع البارزة (Featured Projects Section) -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-diagram-project"></i> معرض الأعمال</span>
+                    <h2 class="section-title">المشاريع البارزة والمتميزة</h2>
+                    <p class="section-desc">نماذج حقيقية لمشاريع تم بناؤها وتطويرها بأحدث المعايير التقنية والتصاميم الجذابة</p>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- أزرار فلاتر المشاريع -->
+                <div class="projects-filter-bar">
+                    <button class="filter-btn active" data-filter="all">جميع المشاريع</button>
+                    <button class="filter-btn" data-filter="web">مواقع ومنصات</button>
+                    <button class="filter-btn" data-filter="systems">أنظمة وحلول</button>
+                    <button class="filter-btn" data-filter="marketing">تسويق وهوية</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- مشروع 1: الموقع السياحي لمحافظة إب -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-image-box">
+                            <div class="project-visual-preview ibb-tour-bg">
+                                <div class="project-overlay-badge">
+                                    <i class="fa-solid fa-mountain-sun"></i> مشروع بارز
+                                </div>
+                                <div class="project-scenery">
+                                    <i class="fa-solid fa-tree"></i>
+                                    <i class="fa-solid fa-cloud"></i>
+                                    <i class="fa-solid fa-compass"></i>
+                                </div>
+                            </div>
+                            <div class="project-hover-overlay">
+                                <button class="btn-project-preview" onclick="openProjectModal('ibb-project')">
+                                    <i class="fa-solid fa-eye"></i> استعراض التفاصيل
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">سياحة واستكشاف</span>
+                                <span class="tag">HTML5 / CSS3 / JS</span>
+                                <span class="tag">خريطة تفاعلية</span>
+                            </div>
+                            <h3 class="project-title">الموقع السياحي لمحافظة إب الخضراء</h3>
+                            <p class="project-summary">
+                                منصة سياحية استكشافية شاملة تسلط الضوء على المعالم السياحية الخلابة في محافظة إب، لواء الأخضر، مع دليل للمتنزهات والشلالات، وحجوزات الفنادق، ودليل إرشادي تفاعلي للزوار.
+                            </p>
+                            <div class="project-footer">
+                                <button class="project-link-btn" onclick="openProjectModal('ibb-project')">
+                                    <span>تفاصيل المشروع</span>
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- مشروع 2: سلسلة مواقع إلكترونية متكاملة -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-image-box">
+                            <div class="project-visual-preview web-suite-bg">
+                                <div class="project-overlay-badge">
+                                    <i class="fa-solid fa-layer-group"></i> حلول متكاملة
+                                </div>
+                                <div class="project-scenery">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <i class="fa-solid fa-chart-pie"></i>
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+                            </div>
+                            <div class="project-hover-overlay">
+                                <button class="btn-project-preview" onclick="openProjectModal('web-suite')">
+                                    <i class="fa-solid fa-eye"></i> استعراض التفاصيل
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">متاجر ومواقع أعمال</span>
+                                <span class="tag">واجهات متجاوبة</span>
+                                <span class="tag">لوحة تحكم</span>
+                            </div>
+                            <h3 class="project-title">سلسلة مواقع إلكترونية متكاملة</h3>
+                            <p class="project-summary">
+                                حزمة متكاملة من المواقع الإلكترونية للشركات والمتاجر، تدعم الدفع الإلكتروني، تجاوب فائق مع شاشات الهواتف، وسرعة فائقة في التحميل مع تهيئة كاملة لمحركات البحث (SEO).
+                            </p>
+                            <div class="project-footer">
+                                <button class="project-link-btn" onclick="openProjectModal('web-suite')">
+                                    <span>تفاصيل المشروع</span>
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- مشروع 3: نظام إدارة ورش صيانة الهواتف الذكية -->
+                    <div class="project-card" data-category="systems">
+                        <div class="project-image-box">
+                            <div class="project-visual-preview mobile-sys-bg">
+                                <div class="project-overlay-badge">
+                                    <i class="fa-solid fa-microchip"></i> نظام إدارة
+                                </div>
+                                <div class="project-scenery">
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                    <i class="fa-solid fa-gears"></i>
+                                    <i class="fa-solid fa-barcode"></i>
+                                </div>
+                            </div>
+                            <div class="project-hover-overlay">
+                                <button class="btn-project-preview" onclick="openProjectModal('repair-sys')">
+                                    <i class="fa-solid fa-eye"></i> استعراض التفاصيل
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">إدارة الصيانة</span>
+                                <span class="tag">متابعة الأجهزة</span>
+                                <span class="tag">فواتير وقطع غيار</span>
+                            </div>
+                            <h3 class="project-title">نظام إدارة ومتابعة صيانة الهواتف</h3>
+                            <p class="project-summary">
+                                تطبيق ونظام إداري لمراكز صيانة الهواتف لمتابعة حالة استلام وتسليم الأجهزة، تتبع قطع الغيار وتكاليف الصيانة وتنبيه العملاء آلياً عبر رسائل الوتساب.
+                            </p>
+                            <div class="project-footer">
+                                <button class="project-link-btn" onclick="openProjectModal('repair-sys')">
+                                    <span>تفاصيل المشروع</span>
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- مشروع 4: الحملة التسويقية وتطوير الهوية التجارية -->
+                    <div class="project-card" data-category="marketing">
+                        <div class="project-image-box">
+                            <div class="project-visual-preview branding-bg">
+                                <div class="project-overlay-badge">
+                                    <i class="fa-solid fa-bullhorn"></i> نمو تسويقي
+                                </div>
+                                <div class="project-scenery">
+                                    <i class="fa-solid fa-chart-simple"></i>
+                                    <i class="fa-solid fa-palette"></i>
+                                    <i class="fa-solid fa-coins"></i>
+                                </div>
+                            </div>
+                            <div class="project-hover-overlay">
+                                <button class="btn-project-preview" onclick="openProjectModal('marketing-project')">
+                                    <i class="fa-solid fa-eye"></i> استعراض التفاصيل
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">تسويق رقمي</span>
+                                <span class="tag">هوية بصرية</span>
+                                <span class="tag">رفع مبيعات</span>
+                            </div>
+                            <h3 class="project-title">حملة تسويقية متكاملة وهوية علامة تجارية</h3>
+                            <p class="project-summary">
+                                تطوير هوية بصرية كاملة وإطلاق حملات إعلانية ممولة عبر وسائل التواصل رفعت تفاعل العلامة ومبيعاتها بنسبة 180% خلال الربع الأول مع تقارير تحليلية دقيقة.
+                            </p>
+                            <div class="project-footer">
+                                <button class="project-link-btn" onclick="openProjectModal('marketing-project')">
+                                    <span>تفاصيل المشروع</span>
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. قسم التواصل (Contact Section) -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle"><i class="fa-solid fa-headset"></i> تواصل معي</span>
+                    <h2 class="section-title">دعنا نبدأ في تحويل أفكارك إلى واقع</h2>
+                    <p class="section-desc">سواء كنت بحاجة إلى استشارة تقنية، تطوير موقع، صيانة أجهزة، أو خطة تسويقية، أنا هنا لمساعدتك</p>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-layout">
+                    <!-- معلومات التواصل المباشر -->
+                    <div class="contact-info-panel">
+                        <div class="contact-info-header">
+                            <h3>معلومات التواصل السريع</h3>
+                            <p>يسعدني تواصلك في أي وقت، وأحرص دائماً على الرد السريع وتقديم المشورة الملائمة.</p>
+                        </div>
+
+                        <div class="contact-methods">
+                            <!-- واتساب -->
+                            <div class="contact-method-card">
+                                <div class="method-icon whatsapp-bg">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div class="method-details">
+                                    <span class="method-label">واتساب / هاتف</span>
+                                    <strong class="method-value" dir="ltr">+967 770 000 000</strong>
+                                </div>
+                                <button class="copy-btn" onclick="copyToClipboard('+967770000000', 'تم نسخ رقم الهاتف!')" title="نسخ الرقم">
+                                    <i class="fa-solid fa-copy"></i>
+                                </button>
+                            </div>
+
+                            <!-- البريد الإلكتروني -->
+                            <div class="contact-method-card">
+                                <div class="method-icon email-bg">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="method-details">
+                                    <span class="method-label">البريد الإلكتروني المباشر</span>
+                                    <strong class="method-value" dir="ltr">eng.waseem.alshaikh@gmail.com</strong>
+                                </div>
+                                <button class="copy-btn" onclick="copyToClipboard('eng.waseem.alshaikh@gmail.com', 'تم نسخ البريد الإلكتروني!')" title="نسخ البريد">
+                                    <i class="fa-solid fa-copy"></i>
+                                </button>
+                            </div>
+
+                            <!-- العنوان الجغرافي -->
+                            <div class="contact-method-card">
+                                <div class="method-icon location-bg">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="method-details">
+                                    <span class="method-label">الموقع الجغرافي</span>
+                                    <strong class="method-value">اليمن - محافظة إب</strong>
+                                </div>
+                            </div>
+
+                            <!-- ساعات العمل والاستجابة -->
+                            <div class="contact-method-card">
+                                <div class="method-icon clock-bg">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div class="method-details">
+                                    <span class="method-label">أوقات العمل</span>
+                                    <strong class="method-value">السبت - الخميس (9:00 ص - 9:00 م)</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- شبكات التواصل الاجتماعي -->
+                        <div class="social-networks-wrap">
+                            <h4>تابعني وتواصل عبر الشبكات:</h4>
+                            <div class="social-links-grid">
+                                <a href="https://wa.me/967770000000" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" title="WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" title="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn github" title="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn facebook" title="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="social-btn telegram" title="Telegram">
+                                    <i class="fa-brands fa-telegram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- استمارة إرسال رسالة -->
+                    <div class="contact-form-panel">
+                        <div class="form-title-box">
+                            <h3>أرسل رسالة مباشرة</h3>
+                            <p>املأ البيانات أدناه وسأعاود التواصل معك في أقرب وقت ممكن</p>
+                        </div>
+
+                        <form id="contactForm" class="contact-form" onsubmit="handleContactSubmit(event)">
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="senderName"><i class="fa-solid fa-user"></i> الاسم الكريم <span class="required">*</span></label>
+                                    <input type="text" id="senderName" name="name" required placeholder="أدخل اسمك الكامل" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="senderPhone"><i class="fa-solid fa-phone"></i> رقم الهاتف / واتساب <span class="required">*</span></label>
+                                    <input type="tel" id="senderPhone" name="phone" required placeholder="مثال: 770000000" dir="ltr" class="form-control text-right">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="senderEmail"><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
+                                <input type="email" id="senderEmail" name="email" placeholder="example@domain.com" dir="ltr" class="form-control text-right">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="serviceInterest"><i class="fa-solid fa-list-check"></i> الخدمة أو الاستشارة المطلوبة</label>
+                                <select id="serviceInterest" name="service" class="form-control">
+                                    <option value="تطوير موقع ويب أو منصة">تطوير موقع ويب أو منصة برمجية</option>
+                                    <option value="إنشاء سيرة ذاتية احترافية">إنشاء سيرة ذاتية احترافية (CV)</option>
+                                    <option value="صيانة وبرمجة هواتف ذكية">صيانة وبرمجة هواتف ذكية</option>
+                                    <option value="تسويق رقمي وحملات إعلانية">تسويق رقمي وحملات إعلانية لرفع المبيعات</option>
+                                    <option value="تصميم هوية وتصاميم إبداعية">تصميم هوية بصرية وتصاميم إبداعية</option>
+                                    <option value="تخطيط استراتيجي وتدريب">تخطيط استراتيجي أو تدريب تقني</option>
+                                    <option value="استشارة أخرى">استفسار أو خدمة أخرى</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="messageBody"><i class="fa-solid fa-message"></i> تفاصيل الرسالة أو المشروع <span class="required">*</span></label>
+                                <textarea id="messageBody" name="message" rows="4" required placeholder="اكتب تفاصيل طلبك أو استفسارك هنا..." class="form-control"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>إرسال الرسالة الآن</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- الفوتر (Footer) -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo-text">
+                        <h3 class="footer-name">المهندس وسيم محمد حفظ الله الشيخ</h3>
+                        <p class="footer-title">مهندس تقنية معلومات ومطور مواقع | IT Specialist & Web Developer</p>
+                    </div>
+                    <p class="footer-bio">
+                        متخصص ومُدرس في مجال تقنية المعلومات، خبرة عريقة في هندسة البرمجيات، صيانة الهواتف، التسويق والتصميم، وصناعة الحلول الرقمية ذات القيمة العالية.
+                    </p>
+                </div>
+
+                <div class="footer-quick-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#hero"><i class="fa-solid fa-chevron-left"></i> الرئيسية</a></li>
+                        <li><a href="#about"><i class="fa-solid fa-chevron-left"></i> نبذة عني</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-chevron-left"></i> الخبرات والخدمات</a></li>
+                        <li><a href="#skills"><i class="fa-solid fa-chevron-left"></i> المهارات والشهادات</a></li>
+                        <li><a href="#projects"><i class="fa-solid fa-chevron-left"></i> المشاريع البارزة</a></li>
+                        <li><a href="#contact"><i class="fa-solid fa-chevron-left"></i> تواصل معي</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services-links">
+                    <h4>أبرز المجالات</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> تطوير المواقع والأنظمة</li>
+                        <li><i class="fa-solid fa-check"></i> السير الذاتية الاحترافية</li>
+                        <li><i class="fa-solid fa-check"></i> صيانة عتاد وبرمجيات الهواتف</li>
+                        <li><i class="fa-solid fa-check"></i> التسويق ورفع المبيعات</li>
+                        <li><i class="fa-solid fa-check"></i> التدريب والاستشارات التقنية</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright-text">
+                    جميع الحقوق محفوظة &copy; <span id="currentYear"></span> 
+                    <strong>المهندس وسيم محمد حفظ الله الشيخ</strong>
+                </p>
+                <div class="footer-scroll-top">
+                    <a href="#hero" class="back-to-top" aria-label="الرجوع للأعلى" title="الرجوع للأعلى">
+                        <span>العودة للأعلى</span>
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- نافذة منبثقة لتفاصيل المشاريع (Project Details Modal) -->
+    <div id="projectModal" class="project-modal" aria-hidden="true">
+        <div class="modal-backdrop" onclick="closeProjectModal()"></div>
+        <div class="modal-dialog">
+            <button class="modal-close-btn" onclick="closeProjectModal()" aria-label="إغلاق النافذة">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modalContent" class="modal-body-content">
+                <!-- يُملأ ديناميكياً عبر الجافاسكريبت -->
+            </div>
+        </div>
+    </div>
+
+    <!-- كود الجافاسكريبت التفاعلي -->
+    <script src="script.js"></script>
+</body>
+</html>
